@@ -1,0 +1,18 @@
+input {
+    display: block;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid rgb(167, 165, 165)
+}
+
+.mydDiv table {
+    font-family: 'Raleway', sans-serif;
+    border: 1px solid rgb(167, 165, 165);
+    padding-top: auto;
+    padding-bottom: auto;
+    font-size: large;
+    background-color: rgb(48, 48, 48);
+    color: white;
+}

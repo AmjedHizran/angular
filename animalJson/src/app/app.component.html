@@ -1,0 +1,72 @@
+<div class="list-type1">
+
+
+    <button class="cont" (click)="filterMovies(more)">
+                more than $9
+            </button>
+
+
+    <button class="cont" (click)="filterMovies(less)">
+                  less than $9
+            </button>
+    <h1 class="cont heading">
+        movie list
+    </h1>
+</div>
+<div class="list-type1">
+    <ol>
+        <li *ngFor="let movie of movieList"><a href="#" (click)="selectItem(movie)">
+                  {{movie.movie_name}}</a>
+        </li>
+    </ol>
+</div>
+
+
+<div class="list-type1" *ngIf="selectedMovie">
+    <div class="cont info-movie">
+        <p>
+            <b>selected movie: </b> {{selectedMovie.movie_name}}
+        </p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <td>
+                        Country:
+                    </td>
+                    <td>
+                        price:
+                    </td>
+                    <td>
+                        Date:
+                    </td>
+                </tr>
+            </thead>
+
+            <tr>
+                <td>
+                    USA
+                </td>
+                <td>
+                    {{selectedMovie.price|currency:'USD':true}}
+                </td>
+                <td>
+                    {{selectedMovie.movie_date}}
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    IL
+                </td>
+                <td>
+                    {{selectedMovie.price*4|currency: 'ILS': true}}
+                </td>
+                <td>
+                    {{selectedMovie.movie_date}}
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+Displaying app.component.html.

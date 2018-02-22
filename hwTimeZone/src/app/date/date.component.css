@@ -1,0 +1,8 @@
+p {
+    border: 3px solid black;
+    margin: auto;
+    font-size: x-large;
+    width: 50%;
+    padding: 10px;
+    color: rgb(160, 163, 0);
+}

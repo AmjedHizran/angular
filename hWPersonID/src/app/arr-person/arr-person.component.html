@@ -1,0 +1,21 @@
+<h3>add a new person:</h3>
+Enter NAME:
+<input [(ngModel)]="nameField " #name type="text"><br> Enter ID:<input [(ngModel)]="idField " #id type=" number "><br>
+<button *ngIf="nameField && idField " (click)="addPersonToList(name.value,id.value) " type="button ">add person</button>
+<button (click)="showPersonList() " *ngIf="showList " type="button ">show Person List</button>
+
+<div class="mydDiv " *ngIf="show ">
+    <h4>PERSONS INFORMATION</h4>
+    <table class="border " border="1 ">
+        <thead>
+            <td><b>ID</b></td>
+            <td><b>NAME</b></td>
+
+
+            <tr *ngFor="let a of personList ">
+                <td>{{a.id}} </td>
+                <td>{{a.name}} </td>
+            </tr>
+        </thead>
+    </table>
+</div>

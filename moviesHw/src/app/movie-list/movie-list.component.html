@@ -1,0 +1,53 @@
+<h1>
+    movie list
+</h1>
+<ol class="movieNames">
+    <li><button (click)="moveInsert('Coraline')">Coraline</button></li>
+    <li><button (click)="moveInsert('Finding Dory')">Finding Dory</button></li>
+    <li><button (click)="moveInsert('The Wailing')">The Wailing</button></li>
+    <li><button (click)="moveInsert('The Void')">The Void</button></li>
+    <li><button (click)="moveInsert('Tower')">Tower</button></li>
+</ol>
+
+<div class="info" [ngSwitch]="selectedMovie">
+
+    <span *ngSwitchCase="'Coraline'">
+     <br><h2>selected movie: {{selectedMovie}}</h2>
+     <table border="1"> 
+     <tr><th>Country:</th><th>Price:</th><th>Date:</th></tr><tr>
+     <td>USA</td><td>${{arr[0].price }}</td><td>{{arr[0].movie_date|date:'dd/MM/yyyy'}}</td></tr>
+     <tr><td>IL</td><td>₪{{arr[0].price * 4}}</td><td>{{arr[0].movie_date }}</td></tr>
+     </table><br></span>
+
+    <span *ngSwitchCase="'Finding Dory'">
+    <br><h2>selected movie: {{selectedMovie}}</h2><br>
+    <table border="1 ">
+    <tr><th>Country:</th><th>Price:</th><th>Date:</th></tr><tr>
+    <td>USA</td><td>${{arr[1].price }}</td><td>{{arr[1].movie_date|date:'dd/MM/yyyy'}}</td></tr>
+    <tr><td>IL</td><td>₪{{arr[1].price * 4}}</td><td>{{arr[1].movie_date }}</td></tr>
+    </table><br></span>
+
+    <span *ngSwitchCase="'The Wailing'"> 
+    <br><h2>selected movie: {{selectedMovie}}</h2><br> 
+    <table border="1 ">
+    <tr><th>Country:</th><th>Price:</th><th>Date:</th></tr><tr>
+    <td>USA</td><td>${{arr[2].price }}</td><td>{{arr[2].movie_date|date:'dd/MM/yyyy'}}</td></tr>
+    <tr><td>IL</td><td>₪{{arr[2].price * 4}}</td><td>{{arr[2].movie_date }}</td></tr>
+    </table><br></span>
+
+    <span *ngSwitchCase="'The Void'">
+    <br> <h2>selected movie: {{selectedMovie}}</h2><br>
+    <table border="1 ">
+    <tr><th>Country:</th><th>Price:</th><th>Date:</th></tr>
+    <tr><td>USA</td><td>${{arr[3].price }}</td><td>{{arr[3].movie_date|date:'dd/MM/yyyy'}}</td> </tr>
+    <tr><td>IL</td><td>₪{{arr[3].price * 4}}</td> <td>{{arr[3].movie_date }}</td></tr>
+    </table><br></span>
+
+    <span *ngSwitchCase="'Tower'">  
+    <br> <h2>selected movie: {{selectedMovie}}</h2><br>
+    <table border="1 ">
+    <tr><th>Country:</th><th>Price:</th><th>Date:</th></tr><tr>
+    <td>USA</td><td>${{arr[4].price }}</td><td>{{arr[4].movie_date|date:'dd/MM/yyyy'}}</td></tr>
+    <tr><td>IL</td><td>₪{{arr[4].price * 4}}</td><td>{{arr[4].movie_date }}</td></tr>
+    </table><br></span>
+</div>
